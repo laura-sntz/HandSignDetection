@@ -9,5 +9,7 @@ python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 
-Com o modelo treinado, é possível testar a detecção dos sinais com o comando "python test.py", a webcam será ativada, e o modelo tentará reconhecer em tempo real a letra correspondente ao sinal da mão capturado. Também conseguimos avaliar a performance do modelo usando o comando "python cross_validation.py".
+Com o modelo treinado, é possível testar a detecção dos sinais com o comando "python test.py", a webcam será ativada, e o modelo tentará reconhecer em tempo real a letra correspondente ao sinal da mão capturado. Também conseguimos realizEa uma validação cruzada com re-treinamento, onde o conjunto de dados é dividido em várias partes. O modelo é treinado e testado várias vezes, cada vez com uma combinação diferente de dados de treino e teste, vemos isso com o comando "python libras_classifier.py"
+
+Nessa etapa, também são ajustados hiperparâmetros automaticamente, como taxa de aprendizado e número de épocas, pra encontrar a configuração que gera os melhores resultados.
 Espera-se que, ao mostrar um sinal de mão correspondente a uma das letras treinadas, o sistema consiga identificar corretamente qual letra está sendo representada, com um bom nível de acurácia.
